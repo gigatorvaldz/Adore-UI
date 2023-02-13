@@ -1,0 +1,76 @@
+@import "../../UI-Kit/Styles";
+
+.Button {
+  $this: &;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  // height: max-content;
+  // width: max-content;
+  color: white;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  outline: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+  min-height: 25px;
+  min-width: 85px;
+
+  &-Text {
+    margin-left: 12px;
+  }
+
+  .ButtonLoader {
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    animation: ButtonLoaderAnimation 1s ease infinite;
+  }
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+
+  &#{$this}__disabled {
+    color: $color-disabled;
+    background-color: $color-disabled-secondary;
+    border-color: $color-disabled-secondary;
+    cursor: default;
+
+    &:hover {
+      color: $color-disabled;
+      background-color: $color-disabled-secondary;
+      border-color: $color-disabled-secondary;
+    }
+  }
+
+  &#{$this}__isLoading {
+    cursor: default;
+
+    &:hover {
+      color: $color-disabled;
+      background-color: $color-disabled-secondary;
+      border-color: $color-disabled-secondary;
+    }
+
+    &#{$this} label {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes ButtonLoaderAnimation {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

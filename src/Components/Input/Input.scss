@@ -1,0 +1,76 @@
+@import "../../UI-Kit/Styles";
+
+.InputLabel {
+    $this: &;
+    display: block;
+    margin-bottom: 0.25em;
+
+    &#{$this}__isHidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0px, 0px, 0px, 0px);
+        white-space: nowrap;
+        border-width: 0px;
+    }
+}
+
+.Input_Wrapper {
+    $this: &;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid $input-primary;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+
+    .Input {
+        all: unset;
+    }
+
+    &#{$this}Validation__error {
+        border-color: red;
+    }
+    &#{$this}Validation__success {
+        border-color: green;
+    }
+    &#{$this}Validation__warning {
+        border-color: orange;
+    }
+
+    &#{$this}__small {
+        font-size: 14px;
+    }
+    &#{$this}__medium {
+        font-size: 16px;
+    }
+    &#{$this}__large {
+        font-size: 18px;
+    }
+
+    &#{$this}__isFocused {
+        border-color: $input-isFocused;
+    } 
+    &#{$this}__disabled {
+        background-color: $input-disabled;
+    } 
+}
+
+.validation {
+    $this: &;
+    transition: 0.3s ease-in-out;
+    margin-top: 0.25em;
+
+    &#{$this}__error {
+        color: red;
+    }
+    &#{$this}__success {
+        color: green;
+    }
+    &#{$this}__warning {
+        color: orange;
+    }
+}
