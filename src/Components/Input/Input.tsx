@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { nanoid } from "nanoid";
 import React, { DOMAttributes, useState } from "react";
 import "./Input.scss";
-import { size } from "Utils/Types/defaultTypes";
+import { size } from "../../Utils/Types/defaultTypes";
 
 type validationStatusType = validationType | "undefined";
 type validationType = "error" | "success" | "warning";
