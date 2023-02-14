@@ -1,0 +1,41 @@
+@import "../../UI-Kit/Styles";
+
+.Confirm_Wrapper {
+    $this: &;
+    box-sizing: border-box;
+    display: inline-flex;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid $color-standart-border;
+
+    &#{$this}__small {
+        font-size: 14px;
+    }
+    &#{$this}__medium {
+        font-size: 16px;
+    }
+    &#{$this}__large {
+        font-size: 18px;
+    }
+
+    & h2 {
+        font-size: 2em;
+        font-weight: 500;
+        padding: 0.1em;
+    }
+
+    & p {
+        font-size: 1em;
+        font-weight: 400;
+        padding: 0.1em;
+    }
+}
+
+.Controls_Wrapper{
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+}

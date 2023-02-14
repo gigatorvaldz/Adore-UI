@@ -1,15 +1,17 @@
 import classNames from "classnames";
 import React, { DOMAttributes } from "react";
+import { size } from "../../Utils/Types/defaultTypes";
 import "./Button.scss";
 
-interface IButtonProps extends DOMAttributes<HTMLButtonElement> {
+export interface IButtonProps extends DOMAttributes<HTMLButtonElement> {
   className?: string;
   onClick?: (event: React.MouseEvent) => void;
   children?: React.ReactNode;
   disabled?: boolean;
   type?: "button" | "reset" | "submit";
   isLoading?: boolean;
-  appearance?: "secondary" | "primary" | "icon";
+  appearance?: "secondary" | "primary" | "icon" | "border";
+  size?: size;
 }
 
 export const Button: React.FC<IButtonProps> = ({
@@ -20,13 +22,14 @@ export const Button: React.FC<IButtonProps> = ({
   className,
   isLoading = false,
   appearance = "primary",
+  size = "medium",
   ...props
 }) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className={classNames("Button", `Button__${appearance}`, className, {
+      className={classNames("Button", `Button__${appearance}`, `Button__${size}`, className, {
         Button__disabled: disabled,
         Button__isLoading: isLoading,
       })}

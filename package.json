@@ -1,6 +1,6 @@
 {
   "name": "adore-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React UI library",
   "main": "./dist/index.js",
   "scripts": {
@@ -12,12 +12,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.0",
-    "@storybook/addon-actions": "^6.3.7",
-    "@storybook/addon-essentials": "^6.3.7",
-    "@storybook/addon-links": "^6.3.7",
-    "@storybook/builder-webpack5": "^6.3.7",
-    "@storybook/manager-webpack5": "^6.3.7",
-    "@storybook/react": "^6.3.7",
     "@types/react": "^17.0.17",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",

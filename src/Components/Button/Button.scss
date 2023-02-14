@@ -8,9 +8,8 @@
   padding: 10px 30px;
   // height: max-content;
   // width: max-content;
-  color: white;
+  color: $alternative-text-color;
   background-color: $color-primary;
-  border: 1px solid $color-primary;
   outline: transparent;
   transition: all 0.3s;
   cursor: pointer;
@@ -63,6 +62,36 @@
       visibility: hidden;
       opacity: 0;
     }
+  }
+
+  &#{$this}__small {
+    font-size: 14px;
+  }
+  &#{$this}__medium {
+    font-size: 16px;
+  }
+  &#{$this}__large {
+    font-size: 18px;
+  }
+
+  &#{$this}__border {
+    background: none;
+    color: $basic-text-color;
+    border: 1px solid $color-border;
+    transition: .3s;
+  }
+
+  &#{$this}__border:hover {
+    background: none;
+    color: $basic-text-color;
+    border: 1px solid $color-border-hover;
+  }
+
+  &#{$this}__medium {
+    font-size: 16px;
+  }
+  &#{$this}__large {
+    font-size: 18px;
   }
 }
 

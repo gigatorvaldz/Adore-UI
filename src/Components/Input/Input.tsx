@@ -7,7 +7,7 @@ import { size } from "../../Utils/Types/defaultTypes";
 type validationStatusType = validationType | "undefined";
 type validationType = "error" | "success" | "warning";
 
-interface IInputProps extends DOMAttributes<HTMLInputElement> {
+export interface IInputProps extends DOMAttributes<HTMLInputElement> {
   placeholder?: string;
   value?: string;
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;

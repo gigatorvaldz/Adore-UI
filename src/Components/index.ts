@@ -1,6 +1,5 @@
-import App from "./App";
-import Layout from "./Layout";
 import Button from './Button';
 import Input from './Input';
+import Confirm from "./Confirm"
 
-export { App, Layout, Button, Input };
+export { Button, Input, Confirm };

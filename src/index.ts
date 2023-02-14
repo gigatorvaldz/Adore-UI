@@ -1,3 +1,3 @@
-import { App, Layout, Button, Input } from "./Components/index"
+import { Button, Input, Confirm } from "./Components/index"
 
-export { App, Layout, Button, Input };
+export { Button, Input, Confirm };
