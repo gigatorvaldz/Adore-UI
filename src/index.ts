@@ -1,3 +1,3 @@
-import { Button, Input, Confirm } from "./Components/index"
+import { Button, Input, Confirm, Checkbox } from "./Components/index"
 
-export { Button, Input, Confirm };
+export { Button, Input, Confirm, Checkbox };
